@@ -7,6 +7,9 @@ ADD \
   https://raw.githubusercontent.com/nginx-proxy/nginx-proxy/main/nginx.tmpl \
   /etc/docker-gen/templates/nginx.tmpl
 
+ENV \
+  ENABLE_IPV6="true"
+
 CMD [ \
   "-notify-sighup", "nginx", \
   "-watch", \
